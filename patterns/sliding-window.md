@@ -13,6 +13,9 @@ WHEN IT FAILS:
 
 ## Review
 
+
+### Deriving the pattern
+
 The sliding window technique allows for finding any contiguous values by a specific relation/condition.
 
 The most brute-force inefficient way to utilize a sliding window is to traverse through the array by using `i` as an anchor, and `j` as the traversal pointer, along with another loop with `k` manually calculating the running result.
@@ -64,3 +67,12 @@ def get(n, arr):
     update best
   return best
 ```
+
+### Variants
+
+The most common patterns that we see here are `at most`, `at least`, and `at exactly`. This is as straightforward as it gets.
+
+For `at most` problems, we have to simply keep a K-sized window at maximum. Vice versa applies for `at least`, but we usually update values while we shrink, because the result depends on K-sizes greater than K (counter-intuitive, but makes sense).
+
+In contrast, `at exactly` requires us to understand a simple logic:
+To find the total count of people exactly aged 65, we just have to remove every count of people aged 64 and below. This means getting `at most` of K and `at most` of K - 1.
