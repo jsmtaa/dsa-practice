@@ -2,18 +2,24 @@
 PROBLEM    : Minimum Size Subarray Sum
 DIFFICULTY : easy 
 PATTERN    : sliding window, running sum
-TRIGGER    : 
+TRIGGER    : at least K
 """
 
-target = 7
-nums = [2, 3, 1, 2, 4, 3]
+def minSubArrayLen(target, nums):
+    """
+    :type target: int
+    :type nums: List[int]
+    :rtype: int
+    """ 
+    l = 0
+    best = float('inf')
+    curr = 0
+    for r in range(len(nums)):
+        curr += nums[r]
 
-best = float('inf')
-for i in range(len(nums)):
-  curr = 0
-  for j in range(i, len(nums)):
-    curr += nums[j]
-    if curr >= target:
-      best = min(best, j - i + 1)
-
-print(best)
+        while curr >= target:
+            best = min(best, r - l + 1)
+            curr -= nums[l]
+            l += 1
+        
+    return 0 if best == float('inf') else best
