@@ -3,8 +3,9 @@
 ---
 
 ## Flash Info
+
 PATTERN: Sliding Window
-TRIGGER: max/min window size, max/min value
+TRIGGER: at least, at most, at exactly
 ONE-SENTENCE IDEA: To avoid redundant computing, we can pass through the array once and optimize.
 VARIANTS: variable, fixed
 WHEN IT FAILS:
@@ -12,7 +13,6 @@ WHEN IT FAILS:
 ---
 
 ## Review
-
 
 ### Deriving the pattern
 
