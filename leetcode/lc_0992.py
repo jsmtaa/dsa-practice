@@ -1,8 +1,8 @@
 """
 PROBLEM   : Subarrays with K Different Integers
-DIFFICULTY: Hard
+DIFFICULTY: hard
 PATTERN   : sliding window, frequency counting
-TRIGGER   : at most K
+TRIGGER   : exactly K distinct integers, count subarrays
 INTUITION : Because we can get count of subarrays with AtMost(K), we can get exactly(K) by subtracting it 
             to the rest of counts from AtMost(K - 1).
 """

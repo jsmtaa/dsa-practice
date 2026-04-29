@@ -1,6 +1,6 @@
 """
 PROBLEM   : Fruit Into Baskets
-DIFFICULTY: Medium
+DIFFICULTY: medium
 PATTERN   : sliding window, frequency counting
 TRIGGER   : at most K
 INTUITION : Since each item of the array represents 1 fruit, and their values represent the type (id),

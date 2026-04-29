@@ -2,7 +2,9 @@
 PROBLEM    : Minimum Size Subarray Sum
 DIFFICULTY : easy 
 PATTERN    : sliding window, running sum
-TRIGGER    : at least K
+TRIGGER    : minimum length subarray, sum ≥ target
+INTUITION  : Expand the window right to grow the sum; once it meets or exceeds the target, shrink
+             from the left to find the smallest valid window, recording the length each time.
 """
 
 def minSubArrayLen(target, nums):
