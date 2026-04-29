@@ -2,7 +2,7 @@
 PROBLEM   : Maximum Average Subarray I
 DIFFICULTY: easy 
 PATTERN   : sliding window, running sum
-TRIGGER   : max sum, k
+TRIGGER   : max sum, at most K
 INTUITION : As the sum of the values increase, it's average values also increases. 
             Therefore, we just find the subarray with max sum with size k then return its average.
 """
