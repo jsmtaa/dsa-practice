@@ -2,16 +2,12 @@
 PROBLEM   : Fruit Into Baskets
 DIFFICULTY: Medium
 PATTERN   : sliding window, frequency counting
-TRIGGER   : 
+TRIGGER   : at most K
 INTUITION : Since each item of the array represents 1 fruit, and their values represent the type (id),
             we can create a frequency map that keeps the length as 2 (invariance if len >= 3)
 """
 
 def totalFruit(fruits):
-    """
-    :type fruits: List[int]
-    :rtype: int
-    """
     baskets = {}
     l = 0
     best = 0
