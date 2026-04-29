@@ -1,13 +1,13 @@
-# Subarrays with K Different Integers;
+"""
+PROBLEM   : Subarrays with K Different Integers
+DIFFICULTY: Hard
+PATTERN   : sliding window, frequency counting
+TRIGGER   : at most K
+INTUITION : Because we can get count of subarrays with AtMost(K), we can get exactly(K) by subtracting it 
+            to the rest of counts from AtMost(K - 1).
+"""
 
-# Intuition: at exactly K. Which is basically AtMostK - AtMostK - 1
 def subarraysWithKDistinct(nums, k):
-  """
-  :type nums: List[int]
-  :type k: int
-  :rtype: int
-  """
-          
   def AtMost(k):
     count = 0
     freq = {}
@@ -20,10 +20,8 @@ def subarraysWithKDistinct(nums, k):
         if freq[nums[l]] == 0:
           del freq[nums[l]]
         l += 1
-        
-      count += r - l + 1
+      
+      count += r - l + 1 # Counts the valid subarrays
     return count
 
   return AtMost(k) - AtMost(k - 1)
-
-print(subarraysWithKDistinct([1,2,1,2,3], 2))
